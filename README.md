@@ -1,6 +1,6 @@
-#QuickBox is a lightweight and user-friendly web app for quick file uploads and instant sharing via direct links or QR codes. Perfect for when you need to share files fast—with secure sign-ups, without hassle.
+# QuickBox is a lightweight and user-friendly web app for quick file uploads and instant sharing via direct links or QR codes. Perfect for when you need to share files fast—with secure sign-ups, without hassle.
 
-#✨ Features
+# ✨ Features
 🚀 Drag & drop file uploads
 
 🔗 Shareable download links
