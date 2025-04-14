@@ -1,8 +1,50 @@
 @import "tailwindcss";
+@tailwind utilities;
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out both;
+}
+
+.animate-fade-in-up {
+  animation: fadeIn 1s ease-out both;
+}
+
+@keyframes neonPulse {
+  0%,
+  100% {
+    box-shadow:
+      0 0 10px #a855f7,
+      0 0 20px #a855f7,
+      0 0 30px #9333ea;
+  }
+  50% {
+    box-shadow:
+      0 0 20px #c084fc,
+      0 0 30px #a855f7,
+      0 0 40px #7e22ce;
+  }
+}
+
+.neon-glow {
+  animation: neonPulse 2s ease-in-out infinite;
+  background-color: #1f2937; /* dark gray */
+  border-radius: 0.5rem;
 }
 
 @theme inline {
@@ -24,3 +66,57 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% auto;
+  animation: gradient 8s linear infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.sidebar-link {
+  @apply flex items-center space-x-2 px-4 py-2 rounded-lg text-gray-400 hover:text-white hover:bg-gray-800/50 transition-all duration-300;
+}
+
+.sidebar-link.active {
+  @apply bg-gradient-to-r from-blue-600/20 to-purple-600/20 text-white border-r-2 border-blue-500;
+}
+
+.glass-card {
+  @apply bg-gray-800/50 backdrop-blur-lg border border-gray-700/50 rounded-2xl;
+}
+
+.btn-gradient {
+  @apply bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-blue-500/25;
+}
+
+.btn-outline {
+  @apply border border-gray-700 bg-gray-800/50 hover:bg-gray-800 text-gray-300 hover:text-white transition-all duration-300;
+}
+
