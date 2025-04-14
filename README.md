@@ -26,4 +26,4 @@ Backend: NodeJS, AWS S3, AWS's DynamoDB, etc.
 
 QR Generation: "qr-react"
 
-Goto:
+Visit Here:
